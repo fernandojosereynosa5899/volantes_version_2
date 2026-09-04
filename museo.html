@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volantes Económicos - Alta Calidad en Impresión</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>VOLANTES ECONÓMICOS</h1>
+                <p><a href="https://maps.app.goo.gl/EnpYZEobB2J1ZGxe9" target="_blank" style="color: white; text-decoration: none;">Poniente 54 Num.3915 • Lunes a Sábado 9:00-18:00</a></p>
+            </div>
+            
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar servicios..." id="searchInput">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#conoce">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#info">Ubicación</a></li>
+                    <li><a href="#galeria">Trabajos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+        
+        <button class="slider-control prev" id="prevSlide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-control next" id="nextSlide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+        
+        <div class="hero-content">
+            <h2>VOLANTES ECONÓMICOS</h2>
+            <p>Alta calidad en impresión al mejor precio</p>
+            <a href="#productos" class="btn-hero">Ver Catálogo</a>
+        </div>
+    </section>
+
+    <section id="conoce" class="section">
+        <div class="container">
+            <h2 class="section-title">ACERCA DE NOSOTROS</h2>
+            <div class="grid-2">
+                <div class="info-card">
+                    <img src="imprenta_fuera.jpg" alt="Fachada de la imprenta" class="info-img" onerror="this.src='https://via.placeholder.com/600x400?text=Nuestra+Imprenta'">
+                </div>
+                <div class="info-content">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Quiénes Somos</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content active">
+                            <p>Somos una empresa con años de experiencia especializada en la impresión offset y digital de alto volumen. Nuestro enfoque principal es ofrecer publicidad impresa accesible sin sacrificar la calidad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Nuestra Promesa</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Garantizamos tiempos de entrega rápidos, colores vibrantes en cada impresión y los precios más competitivos del mercado para potenciar el alcance de tu negocio.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Tecnología</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Contamos con maquinaria de última generación, desde prensas offset para tirajes largos hasta equipos digitales para entregas urgentes en 24 horas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">NUESTROS PRODUCTOS</h2>
+            
+            <div class="salas-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="volantes">Volantes</button>
+                <button class="filter-btn" data-filter="papeleria">Papelería</button>
+            </div>
+            
+            <div class="grid-3" id="salasGrid">
+                <a href="#contacto" class="sala-card" data-category="volantes">
+                    <div class="sala-number"><i class="fas fa-file-alt"></i></div>
+                    <h3>Media Carta</h3>
+                    <p>Millares en papel couché</p>
+                    <div class="sala-tooltip">Ideal para menús, promociones y eventos masivos.</div>
+                </a>
+                <a href="#contacto" class="sala-card" data-category="volantes">
+                    <div class="sala-number"><i class="fas fa-file"></i></div>
+                    <h3>Cuarto de Carta</h3>
+                    <p>Formato económico</p>
+                    <div class="sala-tooltip">El tamaño más popular para buzoneo y entrega en mano.</div>
+                </a>
+                <a href="#contacto" class="sala-card" data-category="papeleria">
+                    <div class="sala-number"><i class="fas fa-id-badge"></i></div>
+                    <h3>Tarjetas de Presentación</h3>
+                    <p>Barniz UV o Mate</p>
+                    <div class="sala-tooltip">Da una excelente primera impresión a tus clientes.</div>
+                </a>
+                <a href="#contacto" class="sala-card" data-category="papeleria">
+                    <div class="sala-number"><i class="fas fa-map"></i></div>
+                    <h3>Dípticos y Trípticos</h3>
+                    <p>Para información detallada</p>
+                    <div class="sala-tooltip">Perfectos para catálogos de servicios e información institucional.</div>
+                </a>
+                <a href="#contacto" class="sala-card" data-category="papeleria">
+                    <div class="sala-number"><i class="fas fa-sticky-note"></i></div>
+                    <h3>Notas y Remisiones</h3>
+                    <p>Papel autocopiante</p>
+                    <div class="sala-tooltip">Mantén el control de tus ventas con folios personalizados.</div>
+                </a>
+                <a href="#contacto" class="sala-card" data-category="volantes">
+                    <div class="sala-number"><i class="fas fa-scroll"></i></div>
+                    <h3>Lonas y Posters</h3>
+                    <p>Gran formato</p>
+                    <div class="sala-tooltip">Atrae las miradas desde lejos con alta resolución.</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2 class="section-title">¿POR QUÉ ELEGIRNOS?</h2>
+            <div class="grid-4">
+                <div class="servicio-item">
+                    <i class="fas fa-shipping-fast icon"></i>
+                    <h3>Envíos Express</h3>
+                    <p class="servicio-desc">Entregas en 24 horas</p>
+                </div>
+                <div class="servicio-item">
+                    <i class="fas fa-paint-brush icon"></i>
+                    <h3>Diseño Gráfico</h3>
+                    <p class="servicio-desc">Armamos tu idea</p>
+                </div>
+                <div class="servicio-item">
+                    <i class="fas fa-boxes icon"></i>
+                    <h3>Alto Volumen</h3>
+                    <p class="servicio-desc">Capacidad industrial</p>
+                </div>
+                <div class="servicio-item">
+                    <i class="fas fa-medal icon"></i>
+                    <h3>Calidad Premium</h3>
+                    <p class="servicio-desc">Materiales duraderos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">INFORMACIÓN Y UBICACIÓN</h2>
+            
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="horarios">Horarios de Atención</button>
+                    <button class="tab-btn" data-tab="llegar">Cómo Llegar</button>
+                    <button class="tab-btn" data-tab="archivos">Guía de Archivos</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="horarios">
+                        <div class="grid-3">
+                            <div class="visitante-card">
+                                <i class="fas fa-clock icon-large"></i>
+                                <h3>Horario Comercial</h3>
+                                <p>Lunes a Viernes: 9:00 - 18:00 hrs</p>
+                                <p>Sábados: 9:00 - 14:00 hrs</p>
+                                <p>Domingo: Cerrado</p>
+                            </div>
+                            <div class="visitante-card">
+                                <i class="fas fa-truck icon-large"></i>
+                                <h3>Entregas</h3>
+                                <p>Recepción de archivos antes de las 12:00 PM</p>
+                                <p>Entregas programadas al día siguiente.</p>
+                            </div>
+                            <div class="visitante-card">
+                                <i class="fas fa-credit-card icon-large"></i>
+                                <h3>Pagos</h3>
+                                <p>Efectivo, Transferencia SPEI</p>
+                                <p>Tarjetas de Crédito/Débito</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="llegar">
+                        <div class="grid-2">
+                            <div class="visitante-card">
+                                <i class="fas fa-map-marker-alt icon-large"></i>
+                                <h3>Ubicación</h3>
+                                <p>Poniente 54 Num.3915</p>
+                                <p>Estamos ubicados en una zona de fácil acceso para recolección de pedidos en vehículo.</p>
+                                <br>
+                                <a href="https://maps.app.goo.gl/EnpYZEobB2J1ZGxe9" target="_blank" class="btn-hero" style="background: var(--color-primary); font-size: 0.9rem; padding: 10px 20px;">Abrir en Google Maps</a>
+                            </div>
+                            <a href="https://maps.app.goo.gl/EnpYZEobB2J1ZGxe9" target="_blank" class="mapa-placeholder" style="text-decoration: none; color: inherit;">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Haz clic para ver el mapa</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" id="archivos">
+                        <div class="visitante-card">
+                            <i class="fas fa-file-pdf icon-large"></i>
+                            <h3>¿Cómo enviar tus diseños?</h3>
+                            <p>Para asegurar la mejor calidad, te pedimos enviar tus archivos en:</p>
+                            <p>- Formato: PDF, Illustrator (.ai) o JPG de alta resolución.</p>
+                            <p>- Color: CMYK (no RGB).</p>
+                            <p>- Margen: Deja 3mm de rebase por cada lado para el corte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2 class="section-title">NUESTROS TRABAJOS</h2>
+            
+            <div class="galeria-filter">
+                <button class="filter-btn active" data-filter-gallery="all">Todo</button>
+                <button class="filter-btn" data-filter-gallery="vol">Volantes</button>
+                <button class="filter-btn" data-filter-gallery="tarjetas">Tarjetas</button>
+            </div>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item" data-category-gallery="vol" data-lightbox="true">
+                    <img src="https://via.placeholder.com/300x200?text=Volante+Restaurante" alt="Volante para restaurante">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Volantes para Restaurante</p>
+                    </div>
+                    <p>Volantes para Restaurante</p>
+                </div>
+                <div class="galeria-item" data-category-gallery="tarjetas" data-lightbox="true">
+                    <img src="https://via.placeholder.com/300x200?text=Tarjetas+Presentación" alt="Tarjetas con barniz">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Tarjetas Barniz a Registro</p>
+                    </div>
+                    <p>Tarjetas Barniz a Registro</p>
+                </div>
+                <div class="galeria-item" data-category-gallery="vol" data-lightbox="true">
+                    <img src="https://via.placeholder.com/300x200?text=Volante+Gimnasio" alt="Volante gimnasio">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Flyers Deportivos</p>
+                    </div>
+                    <p>Flyers Deportivos</p>
+                </div>
+                <div class="galeria-item" data-category-gallery="vol" data-lightbox="true">
+                    <img src="https://via.placeholder.com/300x200?text=Díptico+Corporativo" alt="Díptico">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Dípticos Corporativos</p>
+                    </div>
+                    <p>Dípticos Corporativos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">COTIZA TU PROYECTO</h2>
+            <div class="grid-2">
+                <div class="contacto-info">
+                    <h3>Atención al Cliente</h3>
+                    <p><a href="tel:+525540421232" class="contact-link"><i class="fas fa-phone"></i> Teléfono: 55-4042-1232</a></p>
+                    <p><a href="https://wa.me/525540421232?text=Hola,%20me%20gustar%C3%ADa%20una%20cotizaci%C3%B3n" target="_blank" class="contact-link"><i class="fab fa-whatsapp"></i> WhatsApp: 55-4042-1232</a></p>
+                    <p><a href="mailto:moyrivera100@gmail.com?subject=Cotización%20de%20Imprenta" class="contact-link"><i class="fas fa-envelope"></i> moyrivera100@gmail.com</a></p>
+                    <p><a href="https://maps.app.goo.gl/EnpYZEobB2J1ZGxe9" target="_blank" class="contact-link"><i class="fas fa-map-marker-alt"></i> Pte 54 3915, Obrero Popular, Azcapotzalco, CDMX</a></p>
+                    
+                    <h3>Síguenos en Redes</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100068111139741" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="#" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contacto-form">
+                    <h3>Solicitar Cotización</h3>
+                    <form id="contactForm">
+                        <input type="text" id="nombre" placeholder="Nombre o Empresa" required>
+                        <input type="email" id="email" placeholder="Correo electrónico" required>
+                        <select id="asunto" required>
+                            <option value="">¿Qué necesitas imprimir?</option>
+                            <option value="Volantes">Millares de Volantes</option>
+                            <option value="Tarjetas">Tarjetas de Presentación</option>
+                            <option value="Lonas">Lonas / Gran formato</option>
+                            <option value="Otro">Otro servicio</option>
+                        </select>
+                        <textarea id="mensaje" placeholder="Detalles (Cantidad, tamaño, ¿tienes diseño?)" rows="4" required></textarea>
+                        <button type="submit">Enviar Cotización</button>
+                    </form>
+                    <div class="form-message" id="formMessage"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 Volantes Económicos. Todos los derechos reservados.</p>
+                <p><a href="https://maps.app.goo.gl/EnpYZEobB2J1ZGxe9" target="_blank" style="color: white; text-decoration: none;">Pte 54 3915, Obrero Popular, Azcapotzalco, 02840 Ciudad de México, CDMX</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="closeLightbox">×</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. MENU HAMBURGUESA
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // 2. CARRUSEL HERO
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+                
+                currentSlide = (index + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+            prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => showSlide(i));
+            });
+            setInterval(() => showSlide(currentSlide + 1), 6000); 
+
+            // 3. ACORDEÓN 
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isOpen = content.classList.contains('active');
+                    
+                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+                    document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'));
+                    
+                    if(!isOpen) {
+                        content.classList.add('active');
+                        header.classList.add('active');
+                    }
+                });
+            });
+
+            // 4. FILTRO DE PRODUCTOS
+            const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+            const salaCards = document.querySelectorAll('.sala-card');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    salaCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 5. TABS 
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabPanels.forEach(p => p.classList.remove('active'));
+                    
+                    btn.classList.add('active');
+                    const target = btn.getAttribute('data-tab');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+
+            // 6. GALERÍA FILTRO Y LIGHTBOX
+            const galleryFilterBtns = document.querySelectorAll('.filter-btn[data-filter-gallery]');
+            const galleryItems = document.querySelectorAll('.galeria-item');
+            const lightbox = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightboxImg');
+            const lbCaption = document.getElementById('lightboxCaption');
+
+            galleryFilterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    galleryFilterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const filter = btn.getAttribute('data-filter-gallery');
+                    galleryItems.forEach(item => {
+                        item.style.display = (filter === 'all' || item.getAttribute('data-category-gallery') === filter) ? 'block' : 'none';
+                    });
+                });
+            });
+
+            galleryItems.forEach(item => {
+                if(item.dataset.lightbox === "true") {
+                    item.addEventListener('click', () => {
+                        const img = item.querySelector('img');
+                        lbImg.src = img.src;
+                        lbCaption.textContent = item.querySelector('p').textContent;
+                        lightbox.style.display = 'flex';
+                    });
+                }
+            });
+
+            document.getElementById('closeLightbox').addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+
+            // 7. SCROLL TO TOP
+            const scrollBtn = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 400) {
+                    scrollBtn.style.display = 'block';
+                } else {
+                    scrollBtn.style.display = 'none';
+                }
+            });
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 8. FORMULARIO DE CONTACTO FUNCIONAL CON MAILTO
+            const contactForm = document.getElementById('contactForm');
+            const formMsg = document.getElementById('formMessage');
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Obtener valores del formulario
+                const nombre = document.getElementById('nombre').value;
+                const email = document.getElementById('email').value;
+                const selectAsunto = document.getElementById('asunto');
+                const asuntoTexto = selectAsunto.options[selectAsunto.selectedIndex].text;
+                const mensaje = document.getElementById('mensaje').value;
+                
+                // Formatear el texto para el cuerpo del correo
+                const cuerpoCorreo = `Nombre/Empresa: ${nombre}%0A` +
+                                     `Correo de contacto: ${email}%0A` +
+                                     `Servicio de interés: ${asuntoTexto}%0A%0A` +
+                                     `Detalles del proyecto:%0A${mensaje}`;
+                
+                // Abrir la aplicación de correo del usuario usando mailto
+                window.location.href = `mailto:moyrivera100@gmail.com?subject=Solicitud de Cotización: ${asuntoTexto}&body=${cuerpoCorreo}`;
+                
+                // Mostrar mensaje de éxito
+                formMsg.style.display = 'block';
+                formMsg.className = 'form-message success';
+                formMsg.textContent = "Abriendo tu aplicación de correo. ¡No olvides darle a enviar!";
+                
+                // Limpiar formulario y ocultar mensaje después de 6 segundos
+                contactForm.reset();
+                setTimeout(() => formMsg.style.display = 'none', 6000);
+            });
+
+            // 9. BÚSQUEDA
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('keypress', (e) => {
+                if(e.key === 'Enter') {
+                    alert('Buscando en catálogo: ' + searchInput.value);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
